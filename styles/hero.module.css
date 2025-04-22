@@ -1,0 +1,36 @@
+.flexContainer {
+    composes: sideBySideCenter from 'styles/utils.module.css';
+    margin-top: 70px;
+  }
+  
+  .text {
+    padding-top: calc(var(--display) * 0.5);
+    padding-bottom: calc(var(--display) * 0.7);
+    letter-spacing: 0.05em;
+    font-size: 16px;
+  }
+  
+  .title {
+    font-family: "Helvetica Rounded Std Bold", "Helvetica Rounded", Helvetica, Arial, sans-serif;
+    font-size: var(--display);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+  
+  .subtitle {
+    font-family: "Helvetica Rounded Std Bold", "Helvetica Rounded", Helvetica, Arial, sans-serif;
+    font-size: var(--small-heading2);
+  }
+  
+  /* image */
+  .image {
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .image {
+      width: 50%;
+    }
+  }
+  

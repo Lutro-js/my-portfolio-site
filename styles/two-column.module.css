@@ -1,0 +1,33 @@
+.flexContainer {
+    composes: sideBySide from './utils.module.css';
+    gap: var(--space-md);
+    margin: var(--space-md) 0 var(--space-lg);
+    font-family: YakuHanJP_Narrow, "Zen Kaku Gothic New", sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .main {
+      width: 768px;
+    }
+  
+    .sidebar {
+      width: 240px;
+      position: sticky;
+      top: 40px;
+      align-self: flex-start;
+    }
+  
+    .sidebar * {
+      text-align: right;
+    }
+  
+    .sidebar :is(div, ul) {
+      width: fit-content;
+      margin-left: auto;
+      place-items: flex-end;
+      place-content: flex-end;
+    }
+  }
+  
