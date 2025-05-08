@@ -21,34 +21,32 @@ export default function About() {
         pageImgW={eyecatch.width}
         pageImgH={eyecatch.height}
       />
-      <Hero 
-        title="ABOUT"
-        subtitle="わたしについて" imageOn imageSrc={abouthero}
-      />
-              {/* <Image
-          src={eyecatch}
-          alt=""
-          layout="responsive"
-          sizes="(min-width: 1152px) 1152px, 100vw"
-          priority
-          placeholder="blur"
-        /> */}
-      <figure>
+      <Hero className={styles.herotitle}
+        title=""
+        subtitle="" imageOn imageSrc={abouthero}
+        >
+        <div className={styles.name}>
+          <span className={styles.span}>Kobayashi Hanano</span>
+          <h1 className={styles.h1}>こばやし はなの</h1>
+        </div>
+        </Hero>
 
-      </figure>
       <TwoColumn>
         <TwoColumnMain>
           <PostBody>
-              <p className={styles.p}>1996年生まれ。東京都出身。IT業界で主に既存システムの運用保守を担当しています。
-                SQLを操作してデータを作成したりテスト実施を行っていました。
+ 
+            <p className={styles.p}>
+              1996年生まれ。東京都出身。IT業界で主に既存システムの運用保守を担当していました。
+              <br />
+              SQLを操作してデータを作成したりテスト実施を行っていました。
+            </p>
+
+              <p className={styles.p}>
+              つくったものを目に見える形で表現がしたく、Webサイトやアプリのデザインに興味を持ちました。
+              <br />
+                今まで社内でデザイン業務を担当したこともありましたが、独学だったこともあり、しっかりと基礎から学びたい気持ちで今年の4月からスクールでの学習を開始しました。
               </p>
               <p className={styles.p}>
-              つくったものを目に見える形で表現がしたいと思いWeb制作やアプリデザインに興味を持ちました。
-              Webアプリケーション開発で重要視されるようになった、UIUXの知識と手法を活かしてユーザーはもちろんのこと社会にとってよい影響を与えるデザインを提供したいと思っています。
-              その為に日々学習を継続しています。
-              </p>
-              <p className={styles.p}>
-              ゲームと猫が好きです。
               </p>
               <h2>FAQ</h2>
               <Accordion heading="好きな食べ物は？">

@@ -1,70 +1,86 @@
-/* モバイルファーストのデフォルトスタイル */
+/* 全体ラッパー */
 .worksContainer {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-}
-
-.workItem {
+    gap: 60px;
+  }
+  
+  /* 各作品要素 */
+  .workItem {
     display: flex;
-    flex-direction: column-reverse;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.workText,
-.workImage {
+    justify-content: center;
+  }
+  
+  /* 並びの内側ラッパー */
+  .workImageText {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 中央揃え */
-    align-items: flex-start;
-    gap: 10px;
-}
-
-
-
-.workImage img {
+    gap: 30px;
+    align-items: center;
+  }
+  
+  /* テキスト・画像交互レイアウト（PC用） */
+  @media (min-width: 768px) {
+    .even .workImageText {
+      flex-direction: row-reverse;
+    }
+  
+    .odd .workImageText {
+      flex-direction: row;
+    }
+  
+    .workImageText {
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+  }
+  
+  /* テキスト部分 */
+  .workText {
+    max-width: 500px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .workTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .description {
+    white-space: pre-line;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.8;
+  }
+  
+  /* 画像部分 */
+  .workImage {
+    max-width: 500px;
+    overflow: hidden;
+  }
+  
+  .workImage img {
     width: 100%;
-    height: auto; /* 高さは自動で調整 */
-    object-fit: cover; /* 画像のアスペクト比を保ちながらフィットさせる */
-    object-position: center; /* 画像が中央に表示されるように */
-    box-sizing: border-box;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1); /* ふわっとした影 */
-}
-
-    /* タイトルのスタイル */
-    .homeWorksTitle {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin: 70px 0; /* 余白を調整 */
-    }
-
-    .border {
-        border-top: solid 1px var(--gray-25);
-        width: 100px;
-    }
-
-/* スマホ版（768px 以下）で縦並び */
-@media (min-width: 768px) {
-    .workItem {
-        flex-direction: row; /* 横並び */
-        justify-content: space-around;
-        gap: 20px;
-    }
-
-    /* .workText,
-    .workImage {
-        flex: 1; 
-        width: auto; 
-    } */
-
-    /* 奇数・偶数項目でレイアウトを変更 */
-    .even {
-        flex-direction: row; /* テキストと画像を横並び */
-    }
-
-    .odd {
-        flex-direction: row-reverse; /* 逆順に並べる */
-    }
-}
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  /* タイトル＋線 */
+  .homeWorksTitle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 70px 0 40px;
+  }
+  
+  .border {
+    border-top: 1px solid var(--gray-25);
+    width: 100px;
+  }
+  

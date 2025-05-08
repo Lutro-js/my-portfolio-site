@@ -5,7 +5,6 @@ import Hero from 'components/hero'
 import Works from 'components/works'
 import { worksData } from '@/lib/worksData'
 import styles from 'styles/container.module.css'
-import stylesWorks from 'styles/works.module.css'
 
 const categories = ["すべて", "WEB", "UI", "GRAPHIC"]
 
@@ -21,7 +20,7 @@ export default function WorksPage({ allWorks }) {
       <Meta pageTitle="ワークス" pageDesc="ポートフォリオ作品一覧" />
       <Hero 
         title="WORKS"
-        subtitle="これまでにデザインしたものです"
+        subtitle=""
       />
 
       {/* ✅ カテゴリ + ワーク全体を横並びに */}
@@ -43,7 +42,7 @@ export default function WorksPage({ allWorks }) {
         </div>
 
         {/* 右：ワーク一覧（ここにグリッド） */}
-        <section className={styles.default}>
+        <section className={`${styles.default} hoverGroup`}>
           <Works works={filteredWorks} />
         </section>
       </div>

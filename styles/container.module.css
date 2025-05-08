@@ -48,18 +48,17 @@
     font-size: 1rem;
     padding: 0.4rem 1rem;
     border-radius: 20px;
-    transition: all 0.3s ease;
     display: inline-block;
   }
   
   .categoryList li span:hover {
-    background: rgba(0, 112, 243, 0.1);
-    color: #8ca7c2;
+    background: var(--gray-25);
+    color: var(--white);
   }
   
   .active {
-    background: #c8d8e8;
-    color: #fff;
+    background: var(--black);
+    color: var(--white);
   }
   
   @media (max-width: 768px) {

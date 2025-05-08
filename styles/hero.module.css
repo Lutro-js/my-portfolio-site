@@ -1,10 +1,27 @@
 .flexContainer {
-    composes: sideBySideCenter from 'styles/utils.module.css';
-    margin-top: 70px;
-  }
+  composes: sideBySideCenter from 'styles/utils.module.css';
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* 通常ページ用の余白 */
+:not(.fullScreen).flexContainer {
+  margin-top: 30px;
+}
+
+/* Homeページ用の全画面Hero */
+.fullScreen {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0; /* ← これで確実に打ち消す */
+}
+
   
   .text {
-    padding-top: calc(var(--display) * 0.5);
+    padding-top: calc(var(--display) * 0.2);
     padding-bottom: calc(var(--display) * 0.7);
     letter-spacing: 0.05em;
     font-size: 16px;
