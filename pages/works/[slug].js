@@ -22,18 +22,18 @@ export default function Work({ work, otherWorks }) {
 
           {/* GRAPHIC カテゴリのときだけ mockupImages[0] を表示 */}
           {work.category === 'GRAPHIC' && work.mockupImages?.[0] && (() => {
-  const img = work.mockupImages[0];
-  return (
-    <div className={styles.imagetop}>
-      <Image
-        src={img.src}
-        alt={img.alt}
+            const img = work.mockupImages[0];
+            return (
+              <div className={styles.imagetop}>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
 
-        className={styles.screenshotImage}
-      />
-    </div>
-  );
-})()}
+                  className={styles.screenshotImage}
+                />
+              </div>
+            );
+          })()}
 
 
           {/* コンセプトシートの画像（あれば） */}
@@ -50,11 +50,18 @@ export default function Work({ work, otherWorks }) {
           )}
         </section>
 
-        {/* 内容セクション */}
-        <section className={styles.section}>
-          <h2>ターゲット</h2>
-          <p>{work.target}</p>
-        </section>
+
+          {/* ターゲット */}
+          {work.target && work.highlights.length > 0 && (
+          <section className={styles.section}>
+            <h2>ターゲット</h2>
+            <ul>
+              {work.target.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+          </section>
+          )}
 
         {work.problem && (
           <section className={styles.section}>
@@ -72,13 +79,71 @@ export default function Work({ work, otherWorks }) {
                 src={work.images.scenario.src}
                 alt={work.images.scenario.alt}
                 fill
-                style={{ objectFit: 'contain' }} // 画像全体を表示
+                style={{ objectFit: 'contain' }}
                 className={styles.screenshotImage}
               />
               <p className={styles.caption}>{work.images.scenario.alt}</p>
-
             </div>
-            
+          )}
+
+          {work.images?.persona && (
+            <div className={styles.imageWrapper}>
+              <Image
+                src={work.images.persona.src}
+                alt={work.images.persona.alt}
+                fill
+                style={{ objectFit: 'contain' }} // 画像全体を表示
+                className={styles.screenshotImage}
+              />
+            </div>
+          )}
+
+          {work.images?.backgorund && (
+            <div className={styles.imageWrapper}>
+              <Image
+                src={work.images.backgorund.src}
+                alt={work.images.backgorund.alt}
+                fill
+                style={{ objectFit: 'contain' }} 
+                className={styles.screenshotImage}
+              />
+            </div>
+          )}
+
+          {work.images?.psychologicalIssues && (
+            <div className={styles.imageWrapper}>
+              <Image
+                src={work.images.psychologicalIssues.src}
+                alt={work.images.psychologicalIssues.alt}
+                fill
+                style={{ objectFit: 'contain' }}
+                className={styles.screenshotImage}
+              />
+            </div>
+          )}
+
+          {work.images?.qualityIssues && (
+            <div className={styles.imageWrapper}>
+              <Image
+                src={work.images.qualityIssues.src}
+                alt={work.images.qualityIssues.alt}
+                fill
+                style={{ objectFit: 'contain' }}
+                className={styles.screenshotImage}
+              />
+            </div>
+          )}
+
+          {work.images?.needs && (
+            <div className={styles.imageWrapper}>
+              <Image
+                src={work.images.needs.src}
+                alt={work.images.needs.alt}
+                fill
+                style={{ objectFit: 'contain' }}
+                className={styles.screenshotImage}
+              />
+            </div>
           )}
         </section>
 
@@ -86,6 +151,13 @@ export default function Work({ work, otherWorks }) {
           <section className={styles.section}>
             <h3>構成</h3>
             <p>{work.structure}</p>
+          </section>
+        )}
+
+        {work.process && (
+          <section className={styles.section}>
+            <h3>制作意図</h3>
+            <p>{work.process}</p>
           </section>
         )}
 
