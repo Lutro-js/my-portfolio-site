@@ -2,7 +2,6 @@
     width: 92%;
     max-width: 1152px;
     margin: 0 auto;
-    padding-bottom: 4rem;
   }
   
   .large {
@@ -37,11 +36,11 @@
   
   .categoryList ul {
     display: flex;
-    flex-direction: column;
     gap: 1rem;
     padding: 0;
     list-style: none;
   }
+
   
   .categoryList li span {
     cursor: pointer;
@@ -65,10 +64,6 @@
     .worksLayout {
       flex-direction: column; /* ✅ モバイルでは縦並びに */
     }
-  
-    .categoryList {
-      margin-bottom: 2rem; /* ✅ カテゴリ下に余白を追加すると見栄えが良い */
-    }
 
     .aboutHomeLayout {
       flex-direction: column; 
@@ -77,5 +72,12 @@
 
     .homeLayout_wrapper{
       padding-bottom: 4rem;
+    }
+  }
+
+  /*PC*/
+  @media (min-width: 768px) {
+    .categoryList ul {
+      flex-direction: column;
     }
   }
