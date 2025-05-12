@@ -4,6 +4,10 @@ import Container from 'components/container'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from 'styles/works.module.css'
+import hoverstyles from 'styles/animations.module.css'
+import icon from '/images/icon.png'
+
+
 
 export default function Work({ work, otherWorks }) {
   return (
@@ -24,8 +28,7 @@ export default function Work({ work, otherWorks }) {
       <Image
         src={img.src}
         alt={img.alt}
-        width={800}
-        height={450}
+
         className={styles.screenshotImage}
       />
     </div>
@@ -39,8 +42,7 @@ export default function Work({ work, otherWorks }) {
               <Image
                 src={work.images.concept.src}
                 alt={work.images.concept.alt}
-                width={800}
-                height={450}
+
                 className={styles.screenshotImage}
               />
               <p className={styles.caption}>{work.images.concept.alt}</p>
@@ -69,12 +71,14 @@ export default function Work({ work, otherWorks }) {
               <Image
                 src={work.images.scenario.src}
                 alt={work.images.scenario.alt}
-                width={800}
-                height={450}
+                fill
+                style={{ objectFit: 'contain' }} // 画像全体を表示
                 className={styles.screenshotImage}
               />
               <p className={styles.caption}>{work.images.scenario.alt}</p>
+
             </div>
+            
           )}
         </section>
 
@@ -158,39 +162,39 @@ export default function Work({ work, otherWorks }) {
         {work.category !== 'GRAPHIC' && Array.isArray(work.mockupImages) && (
           <section className={styles.mockupTwoColumn}>
             {work.siteUrl && (
-              <a href={work.siteUrl} target="_blank" rel="noopener noreferrer">
+              <a href={work.siteUrl} target="_blank" rel="noopener noreferrer" className={styles.linkWithIcon}>
+                <Image src={icon} alt="リンクアイコン" className={styles.icon} />
                 サイトを見る
               </a>
             )}
-            <div className={styles.column}>
-              {work.mockupImages.slice(0, 3).map((img, i) => (
-                <div key={i} className={styles.mockupImageWrapper}>
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    style={{ width: '100%', height: 'auto', maxWidth: '360px' }}
-                  />
-                </div>
-              ))}
-            </div>
+
+            {work.mockupImages.map((img, i) => (
+              <div key={i} className={styles.mockupImageWrapper}>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  style={{ width: '100%', height: 'auto', maxWidth: '360px' }}
+                />
+              </div>
+            ))}
           </section>
         )}
 
         {/* 次の作品リンク */}
         {work.nextWork && (
-          <section className={styles.nextWork}>
+          <section className={hoverstyles.nextWork}>
             <span className={styles.nextLabel}>NEXT</span>
-              <Link href={`/works/${work.nextWork.slug}`} className={styles.nextLink}>
-                <div className={styles.imageHoverWrapper}>
-                  <div className={styles.nextImageWrapper}>
+              <Link href={`/works/${work.nextWork.slug}`} className={hoverstyles.nextLink}>
+                <div className={hoverstyles.imageHoverWrapper}>
+                  <div className={hoverstyles.nextImageWrapper}>
                     <Image
                       src={work.nextWork.image}
                       alt={work.nextWork.title}
-                      className={styles.media}
+                      className={hoverstyles.media}
                     />
                   </div>
-                  <div className={styles.overlay}>
-                    <span className={styles.overlayTitle}>{work.nextWork.title}</span>
+                  <div className={hoverstyles.overlay}>
+                    <span className={hoverstyles.overlayTitle}>{work.nextWork.title}</span>
                   </div>
                 </div>
             </Link>

@@ -66,3 +66,71 @@
     opacity: 0;
   }
 }
+
+/* 親が relative & overflow: hidden で拡大を制御 */
+.imageHoverWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* or お好みで */
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* 画像ラッパー */
+.nextImageWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.nextImageWrapper :global(img) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* 拡大エフェクト */
+.imageHoverWrapper:hover :global(img) {
+  transform: scale(1.1);
+}
+
+/* オーバーレイ（初期非表示） */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* テキストにhoverが取られないように */
+  
+}
+
+/* ホバー時にオーバーレイを表示 */
+.imageHoverWrapper:hover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 中央のテキスト */
+.overlayTitle {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+

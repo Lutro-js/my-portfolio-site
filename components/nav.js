@@ -1,9 +1,11 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import styles from 'styles/nav.module.css'
 
 export default function Nav() {
     const [navIsOpen, setNavIsOpen] = useState(false)
+    const router = useRouter()
 
     const toggleNav = () => {
         setNavIsOpen((prev) => !prev)
@@ -33,17 +35,22 @@ export default function Nav() {
             </button>
             <ul className={styles.list}>
                 <li>
-                    <Link onClick={closeNav} href="/about">
+                    <Link href="/" onClick={closeNav} className={router.pathname === '/' ? styles.active : ''}>
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/about" onClick={closeNav} className={router.pathname === '/about' ? styles.active : ''}>
                         About
                     </Link>
                 </li>
                 <li>
-                    <Link onClick={closeNav} href="/works">
+                    <Link href="/works" onClick={closeNav} className={router.pathname === '/works' ? styles.active : ''}>
                         Works
                     </Link>
                 </li>
                 <li>
-                    <Link onClick={closeNav} href="/blog">
+                    <Link href="/blog" onClick={closeNav} className={router.pathname === '/blog' ? styles.active : ''}>
                         Blog
                     </Link>
                 </li>

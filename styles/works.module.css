@@ -52,11 +52,12 @@
 
 .imageWrapper {
   position: relative;
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
   aspect-ratio: 16 / 9;
+  padding: 0.5em;
 }
 
 .nextImageWrapper {
@@ -113,6 +114,15 @@
 .hero {
   text-align: center;
 }
+
+.hero h1 {
+  margin-bottom: 0.5em; /* h1 と p の間に余白 */
+}
+
+.hero p {
+  margin-bottom: 4rem; /* h1 と p の間に余白 */
+}
+
 .scrollHint {
   font-size: 0.9rem;
   color: #888;
@@ -127,10 +137,12 @@
 }
 
 .nextLabel {
-  display: block;
+  display: flex;
+  justify-content: center;
   font-size: 0.9rem;
   color: #888;
-  margin-bottom: 1rem;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
   letter-spacing: 0.1em;
 }
 
@@ -247,7 +259,7 @@
   display: flex;
   justify-content: center;
   gap: 4rem; 
-  margin-top: 2rem;
+  margin-top: 8rem;
   flex-wrap: wrap; 
 
 }
@@ -261,4 +273,13 @@
 
 .mockupImageWrapper {
   max-width: 360px;
+}
+
+.linkWithIcon {
+  display: inline-flex;
+  gap: 0.4em;
+  color: rgb(217, 196, 62);
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
 }

@@ -57,7 +57,6 @@ export default function Home({ posts, works }) {
             </div>
           ))}
         </section>
-
         <Pagination nextUrl="/works" nextText="すべてみる" />
       </div>
 
@@ -82,10 +81,9 @@ export default function Home({ posts, works }) {
               IT業界でシステムの運用保守やテストを担当していました。<br />
               社内でWebサイト制作を任された経験があり、さらに深く知識やスキルを身につけたいと思い、個人で学習とスクールでUIやUXについて学びながら転職活動をしています。
             </p>
-
+            <Pagination nextUrl="/about" nextText="詳しくみる" />
           </div>
         </div>
-        <Pagination nextUrl="/about" nextText="詳しくみる" />
       </div>
 
       {/* ブログ */}

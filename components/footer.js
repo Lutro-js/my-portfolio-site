@@ -14,6 +14,9 @@ export default function Footer() {
             <Social />
           </div>
         </Container>
+        <div className={styles.copyright}>
+          <small>© 2025 HANANO KOBAYASHI. All rights reserved.</small>
+        </div>
       </footer>
     )
   }

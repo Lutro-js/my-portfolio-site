@@ -8,6 +8,18 @@
         display: flex;
         gap: 2em;
     }
+    .list li a {
+        text-decoration: none;
+        padding: 0.5rem ;
+        display: block;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .list li a:hover {
+    color: var(--accent);
+  }
+    .active {
+        border-bottom: 2px solid var(--accent); 
+      }
 }
 
 /*モバイル*/
@@ -91,6 +103,7 @@
         text-align: center;
     }
 }
+
 
 /* @media (hover: hover) {
     .list a:hover {

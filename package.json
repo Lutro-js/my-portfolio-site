@@ -25,6 +25,7 @@
     "plaiceholder": "^3.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.6.0",
     "sharp": "^0.33.5"
   },
   "devDependencies": {

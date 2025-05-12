@@ -1,6 +1,6 @@
 .frame {
     padding: var(--space-md) 0;
-    background-color: #1e1e1e;
+    background-color: var(--accent);
 }
 
 .frame > :first-child {

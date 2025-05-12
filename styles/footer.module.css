@@ -1,9 +1,16 @@
 .wrapper {
-    padding: var(--space-xl) 0;
+    padding-top: var(--space-xl) ;
+    padding-bottom: var(--space-xs) ;
     background-color: var(--gray-10);
 }
 
 .flexContainer {
     composes: sideBySideCenter from 'styles/utils.module.css';
     gap: 2em;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    padding-top: var(--space-xl);
 }
