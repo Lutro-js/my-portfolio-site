@@ -8,7 +8,7 @@ export default function Social({iconSize = 'initial'}) {
     return (
         <ul className={styles.list} style={{'--icon-size':iconSize}}>
             <li>
-                <a href="mailto:your-email@example.com">
+                <a href="ltrntxs@gmail.com">
                     <FontAwesomeIcon icon={faEnvelope} />
                     <span className="sr-only">Email</span>
                 </a>
@@ -19,12 +19,12 @@ export default function Social({iconSize = 'initial'}) {
                     <span className="sr-only">GitHub</span>
                 </a>
             </li>
-            <li>
-                <a href="https://www.instagram.com/hanatosu_/">
+            {/* <li>
+                <a href="">
                     <FontAwesomeIcon icon={faInstagram} />
                     <span className="sr-only">Instagram</span>
                 </a>
-            </li>
+            </li> */}
         </ul>
     )
 }
