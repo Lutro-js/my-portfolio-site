@@ -6,7 +6,7 @@ import Works from 'components/works'
 import { worksData } from '@/lib/worksData'
 import styles from 'styles/container.module.css'
 
-const categories = ["すべて", "WEB", "UI", "GRAPHIC"]
+const categories = ["すべて","UI","LP","WEB","GRAPHIC"]
 
 export default function WorksPage({ allWorks }) {
   const [selectedCategory, setSelectedCategory] = useState("すべて")
@@ -19,7 +19,7 @@ export default function WorksPage({ allWorks }) {
     <Container>
       <Meta pageTitle="ワークス" pageDesc="ポートフォリオ作品一覧" />
       <Hero 
-        title="WORKS"
+        title="100WORKS"
         subtitle=""
       />
 
