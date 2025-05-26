@@ -19,7 +19,7 @@ export default function WorksPage({ allWorks }) {
     <Container>
       <Meta pageTitle="ワークス" pageDesc="ポートフォリオ作品一覧" />
       <Hero 
-        title="100 WORKS"
+        title="WORKS"
         subtitle=""
       />
 
