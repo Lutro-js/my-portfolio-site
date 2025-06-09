@@ -6,6 +6,8 @@ import Link from 'next/link'
 import styles from 'styles/works.module.css'
 import hoverstyles from 'styles/animations.module.css'
 import icon from '/images/icon.png'
+import Image from 'next/image'
+
 
 
 
