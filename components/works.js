@@ -11,26 +11,16 @@ export default function Works({ works }) {
           <Link href={`/works/${slug}`}>
             <div className={styles.card}>
               <figure className={`${styles.imageWrapper} ${animation.hoverZoom}`}>
-                {media?.type === 'video' ? (
-                  <video controls className={styles.media}>
-                    <source src={media.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                ) : (
-                  <div className={styles.imageWrapper}>
-                    <Image
-                      src={eyecatch}
-                      alt={title}
-                      fill
-                      loading="eager"
-                      className={styles.media}
-                      style={{ objectFit: 'cover' }}
-                    />
-                  </div>
-
-
-                
-                )}
+                <div className={styles.imageWrapper}>
+                  <Image
+                    src={eyecatch}
+                    alt={title}
+                    fill
+                    loading="eager"
+                    className={styles.media}
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
               </figure>
               <h2 className={`${styles.workTitle} ${animation.underlineAnimate}`}>
                 {title}
