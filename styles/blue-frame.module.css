@@ -1,6 +1,7 @@
 .frame {
     padding: var(--space-md) 0;
     background-color: var(--accent);
+    margin-bottom: var(--space-);
 }
 
 .frame > :first-child {

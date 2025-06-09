@@ -6,12 +6,12 @@ import Works from 'components/works'
 import { worksData } from '@/lib/worksData'
 import styles from 'styles/container.module.css'
 
-const categories = ["すべて","UI","LP","WEB","GRAPHIC"]
+const categories = ["ALL","UI","LP","WEB","GRAPHIC"]
 
 export default function WorksPage({ allWorks }) {
-  const [selectedCategory, setSelectedCategory] = useState("すべて")
+  const [selectedCategory, setSelectedCategory] = useState("ALL")
 
-  const filteredWorks = selectedCategory === "すべて"
+  const filteredWorks = selectedCategory === "ALL"
     ? allWorks
     : allWorks.filter(work => work.category === selectedCategory)
 

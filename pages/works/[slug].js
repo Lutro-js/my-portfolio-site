@@ -38,7 +38,7 @@ export default function Work({ work, otherWorks }) {
 
           {/* コンセプトシートの画像（あれば） */}
           {work.images?.concept && (
-            <div className={styles.imageWrapper}>
+            <div className={styles.screenshotImageimageWrapper}>
               <Image
                 src={work.images.concept.src}
                 alt={work.images.concept.alt}
@@ -72,22 +72,21 @@ export default function Work({ work, otherWorks }) {
 
         <section className={styles.section}>
           <h2>目的</h2>
-          <p>{work.purpose}</p>
+          <p className={styles.margin}>{work.purpose}</p>
           {work.images?.scenario && (
-            <div className={styles.imageWrapper}>
+            <div className={styles.screenshotImageimageWrapper}>
               <Image
                 src={work.images.scenario.src}
                 alt={work.images.scenario.alt}
                 fill
                 style={{ objectFit: 'contain' }}
-                className={styles.screenshotImage}
               />
               <p className={styles.caption}>{work.images.scenario.alt}</p>
             </div>
           )}
 
           {work.images?.persona && (
-            <div className={styles.imageWrapper}>
+            <div className={styles.screenshotImageimageWrapper}>
               <Image
                 src={work.images.persona.src}
                 alt={work.images.persona.alt}
@@ -99,7 +98,7 @@ export default function Work({ work, otherWorks }) {
           )}
 
           {work.images?.backgorund && (
-            <div className={styles.imageWrapper}>
+            <div className={styles.screenshotImageimageWrapper}>
               <Image
                 src={work.images.backgorund.src}
                 alt={work.images.backgorund.alt}
@@ -111,7 +110,7 @@ export default function Work({ work, otherWorks }) {
           )}
 
           {work.images?.psychologicalIssues && (
-            <div className={styles.imageWrapper}>
+            <div className={styles.screenshotImageimageWrapper}>
               <Image
                 src={work.images.psychologicalIssues.src}
                 alt={work.images.psychologicalIssues.alt}
@@ -123,7 +122,7 @@ export default function Work({ work, otherWorks }) {
           )}
 
           {work.images?.qualityIssues && (
-            <div className={styles.imageWrapper}>
+            <div className={styles.screenshotImageimageWrapper}>
               <Image
                 src={work.images.qualityIssues.src}
                 alt={work.images.qualityIssues.alt}
@@ -135,7 +134,7 @@ export default function Work({ work, otherWorks }) {
           )}
 
           {work.images?.needs && (
-            <div className={styles.imageWrapper}>
+            <div className={styles.screenshotImageimageWrapper}>
               <Image
                 src={work.images.needs.src}
                 alt={work.images.needs.alt}
