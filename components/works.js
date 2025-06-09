@@ -22,6 +22,7 @@ export default function Works({ works }) {
                       src={eyecatch}
                       alt={title}
                       fill
+                      loading="eager"
                       className={styles.media}
                       style={{ objectFit: 'cover' }}
                     />

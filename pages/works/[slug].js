@@ -8,9 +8,6 @@ import hoverstyles from 'styles/animations.module.css'
 import icon from '/images/icon.png'
 import Image from 'next/image'
 
-
-
-
 export default function Work({ work, otherWorks }) {
   return (
     <Container>
