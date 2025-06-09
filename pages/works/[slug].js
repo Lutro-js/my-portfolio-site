@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from 'styles/works.module.css'
 import hoverstyles from 'styles/animations.module.css'
-import icon from '/images/icon.png'
+import linkicon from '/images/linkicon.png'
 
 export default function Work({ work, otherWorks }) {
   return (
@@ -153,7 +153,11 @@ export default function Work({ work, otherWorks }) {
         {work.process && (
           <section className={styles.section}>
             <h3>制作意図</h3>
-            <p>{work.process}</p>
+            <ul>
+                {work.process.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+            </ul>
           </section>
         )}
 
@@ -232,7 +236,7 @@ export default function Work({ work, otherWorks }) {
           <section className={styles.mockupTwoColumn}>
             {work.siteUrl && (
               <a href={work.siteUrl} target="_blank" rel="noopener noreferrer" className={styles.linkWithIcon}>
-                <Image src={icon} alt="リンクアイコン" className={styles.icon} />
+                <Image src={linkicon} alt="リンクアイコン" className={styles.icon} />
                 サイトを見る
               </a>
             )}
