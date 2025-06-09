@@ -15,8 +15,8 @@ export default function Works({ works }) {
                   <Image
                     src={eyecatch}
                     alt={title}
-                    fill
-                    loading="eager"
+                    width={400} // 必要に応じて調整
+                    height={300}
                     className={styles.media}
                     style={{ objectFit: 'cover' }}
                   />

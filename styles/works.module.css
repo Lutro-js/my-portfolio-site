@@ -58,7 +58,7 @@
   max-width: 60%;
   margin: 0 auto;
   overflow: hidden;
-  /* width: 100%; */
+  width: 100%;
   aspect-ratio: 16 / 9;
   padding: 0.5em;
 }
@@ -68,7 +68,7 @@
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  /* width: 100%; */
+  width: 100%;
   aspect-ratio: 16 / 9;
   padding: 0.5em;
 }

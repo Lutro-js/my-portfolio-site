@@ -6,7 +6,6 @@ import Link from 'next/link'
 import styles from 'styles/works.module.css'
 import hoverstyles from 'styles/animations.module.css'
 import icon from '/images/icon.png'
-import Image from 'next/image'
 
 export default function Work({ work, otherWorks }) {
   return (
@@ -27,7 +26,6 @@ export default function Work({ work, otherWorks }) {
                 <Image
                   src={img.src}
                   alt={img.alt}
-
                   className={styles.screenshotImage}
                 />
               </div>
@@ -222,6 +220,7 @@ export default function Work({ work, otherWorks }) {
                 width="100%"
                 height="100%"
                 allowFullScreen
+                loading="lazy"
                 style={{ border: '1px solid #ccc' }}
               ></iframe>
             </div>

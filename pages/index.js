@@ -16,7 +16,6 @@ import kamaboko from 'images/kamaboko.png'
 import cube from 'images/cube.jpg'
 import animation from 'styles/animations.module.css'
 
-
 export default function Home({ posts, works }) {
   return (
     <Container>
@@ -44,6 +43,7 @@ export default function Home({ posts, works }) {
                       width={500}
                       height={300}
                       className={styles.image}
+                      loading="eager"
                     />
                   </div>
                 </Link>
