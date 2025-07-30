@@ -1,0 +1,260 @@
+.comparisonSection {
+  margin: 3rem 0;
+  padding: 2rem 0;
+}
+
+.comparisonTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.comparisonDescription {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.comparisonContainer {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #e9ecef;
+}
+
+/* タブ切り替え */
+.tabContainer {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #666;
+}
+
+.tab:hover {
+  border-color: #007bff;
+  color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.tab.active {
+  border-color: #007bff;
+  background: #007bff;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.tabLabel {
+  font-size: 1rem;
+}
+
+.tabIcon {
+  font-size: 1.2rem;
+}
+
+/* プロトタイプ表示エリア */
+.prototypeContainer {
+  margin-bottom: 2rem;
+}
+
+.prototypeWrapper {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.prototypeHeader {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.prototypeTitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.prototypeDescription {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.iframeContainer {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: #f8f9fa;
+}
+
+.prototypeIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0 0 8px 8px;
+}
+
+/* 比較説明 */
+.comparisonInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.infoCard {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.infoTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.infoTitle::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 2px;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoList li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f3f4;
+  color: #666;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.infoList li:last-child {
+  border-bottom: none;
+}
+
+.infoList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.prototypeWrapper {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .comparisonContainer {
+    padding: 1rem;
+  }
+  
+  .tabContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .tab {
+    justify-content: center;
+  }
+  
+  .comparisonInfo {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .iframeContainer {
+    height: 400px;
+  }
+  
+  .prototypeHeader {
+    padding: 1rem;
+  }
+  
+  .prototypeTitle {
+    font-size: 1.1rem;
+  }
+  
+  .infoCard {
+    padding: 1rem;
+  }
+}
+
+/* ローディング状態 */
+.iframeContainer::before {
+  content: 'Figmaプロトタイプを読み込み中...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+.prototypeIframe {
+  position: relative;
+  z-index: 2;
+}
+
+/* ホバー効果 */
+.infoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* アクセシビリティ */
+.tab:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.infoCard:focus-within {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+} 

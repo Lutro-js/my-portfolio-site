@@ -3,6 +3,8 @@ import Meta from 'components/meta'
 import Container from 'components/container'
 import Image from 'next/image'
 import Link from 'next/link'
+import MiroEmbed from 'components/miro-embed'
+import FigmaPrototypeComparison from 'components/figma-prototype-comparison'
 import styles from 'styles/works.module.css'
 import hoverstyles from 'styles/animations.module.css'
 import linkicon from '/images/linkicon.png'
@@ -67,81 +69,83 @@ export default function Work({ work, otherWorks }) {
           </section>
         )}
 
-        <section className={styles.section}>
-          <h2>目的</h2>
-          <p className={styles.margin}>{work.purpose}</p>
-          {work.images?.scenario && (
-            <div className={styles.screenshotImageimageWrapper}>
-              <Image
-                src={work.images.scenario.src}
-                alt={work.images.scenario.alt}
-                fill
-                style={{ objectFit: 'contain' }}
-              />
-              <p className={styles.caption}>{work.images.scenario.alt}</p>
-            </div>
-          )}
+        {work.purpose && (
+          <section className={styles.section}>
+            <h3>目的</h3>
+            <p>{work.purpose}</p>
+            {work.images?.scenario && (
+              <div className={styles.screenshotImageimageWrapper}>
+                <Image
+                  src={work.images.scenario.src}
+                  alt={work.images.scenario.alt}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                />
+                <p className={styles.caption}>{work.images.scenario.alt}</p>
+              </div>
+            )}
 
-          {work.images?.persona && (
-            <div className={styles.screenshotImageimageWrapper}>
-              <Image
-                src={work.images.persona.src}
-                alt={work.images.persona.alt}
-                fill
-                style={{ objectFit: 'contain' }} // 画像全体を表示
-                className={styles.screenshotImage}
-              />
-            </div>
-          )}
+            {work.images?.persona && (
+              <div className={styles.screenshotImageimageWrapper}>
+                <Image
+                  src={work.images.persona.src}
+                  alt={work.images.persona.alt}
+                  fill
+                  style={{ objectFit: 'contain' }} // 画像全体を表示
+                  className={styles.screenshotImage}
+                />
+              </div>
+            )}
 
-          {work.images?.backgorund && (
-            <div className={styles.screenshotImageimageWrapper}>
-              <Image
-                src={work.images.backgorund.src}
-                alt={work.images.backgorund.alt}
-                fill
-                style={{ objectFit: 'contain' }} 
-                className={styles.screenshotImage}
-              />
-            </div>
-          )}
+            {work.images?.backgorund && (
+              <div className={styles.screenshotImageimageWrapper}>
+                <Image
+                  src={work.images.backgorund.src}
+                  alt={work.images.backgorund.alt}
+                  fill
+                  style={{ objectFit: 'contain' }} 
+                  className={styles.screenshotImage}
+                />
+              </div>
+            )}
 
-          {work.images?.psychologicalIssues && (
-            <div className={styles.screenshotImageimageWrapper}>
-              <Image
-                src={work.images.psychologicalIssues.src}
-                alt={work.images.psychologicalIssues.alt}
-                fill
-                style={{ objectFit: 'contain' }}
-                className={styles.screenshotImage}
-              />
-            </div>
-          )}
+            {work.images?.psychologicalIssues && (
+              <div className={styles.screenshotImageimageWrapper}>
+                <Image
+                  src={work.images.psychologicalIssues.src}
+                  alt={work.images.psychologicalIssues.alt}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  className={styles.screenshotImage}
+                />
+              </div>
+            )}
 
-          {work.images?.qualityIssues && (
-            <div className={styles.screenshotImageimageWrapper}>
-              <Image
-                src={work.images.qualityIssues.src}
-                alt={work.images.qualityIssues.alt}
-                fill
-                style={{ objectFit: 'contain' }}
-                className={styles.screenshotImage}
-              />
-            </div>
-          )}
+            {work.images?.qualityIssues && (
+              <div className={styles.screenshotImageimageWrapper}>
+                <Image
+                  src={work.images.qualityIssues.src}
+                  alt={work.images.qualityIssues.alt}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  className={styles.screenshotImage}
+                />
+              </div>
+            )}
 
-          {work.images?.needs && (
-            <div className={styles.screenshotImageimageWrapper}>
-              <Image
-                src={work.images.needs.src}
-                alt={work.images.needs.alt}
-                fill
-                style={{ objectFit: 'contain' }}
-                className={styles.screenshotImage}
-              />
-            </div>
-          )}
-        </section>
+            {work.images?.needs && (
+              <div className={styles.screenshotImageimageWrapper}>
+                <Image
+                  src={work.images.needs.src}
+                  alt={work.images.needs.alt}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  className={styles.screenshotImage}
+                />
+              </div>
+            )}
+          </section>
+        )}
 
         {work.structure && (
           <section className={styles.section}>
@@ -229,6 +233,25 @@ export default function Work({ work, otherWorks }) {
               ></iframe>
             </div>
           </section>
+        )}
+
+        {/* Miro埋め込み */}
+        {work.miroEmbed && (
+          <MiroEmbed
+            miroUrl={work.miroEmbed.url}
+            title={work.miroEmbed.title}
+            description={work.miroEmbed.description}
+          />
+        )}
+
+        {/* Figmaプロトタイプ比較 */}
+        {work.figmaPrototypeComparison && (
+          <FigmaPrototypeComparison
+            beforeUrl={work.figmaPrototypeComparison.beforeUrl}
+            afterUrl={work.figmaPrototypeComparison.afterUrl}
+            title={work.figmaPrototypeComparison.title}
+            description={work.figmaPrototypeComparison.description}
+          />
         )}
 
         {/* モックアップ（GRAPHIC以外のときのみ表示） */}
