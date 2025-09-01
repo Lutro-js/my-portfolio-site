@@ -15,10 +15,10 @@ export default function Works({ works }) {
                   <Image
                     src={eyecatch}
                     alt={title}
-                    width={400} // 必要に応じて調整
-                    height={300}
+                    fill
                     className={styles.media}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
+                    sizes="(max-width: 600px) 100vw, 400px"
                   />
                 </div>
               </figure>

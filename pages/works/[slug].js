@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import MiroEmbed from 'components/miro-embed'
 import FigmaPrototypeComparison from 'components/figma-prototype-comparison'
+import PdfCarousel from 'components/pdf-carousel'
 import styles from 'styles/works.module.css'
 import hoverstyles from 'styles/animations.module.css'
 import linkicon from '/images/linkicon.png'
@@ -183,6 +184,16 @@ export default function Work({ work, otherWorks }) {
           <h2>使用ツール</h2>
           <p>{Array.isArray(work.tools) ? work.tools.join(' / ') : work.tools}</p>
         </section>
+
+        {work.carouselImages && (
+  <PdfCarousel
+    pages={work.carouselImages}
+    title={work.title}
+    pdfUrl={work.pdfUrl}
+  />
+)}
+
+
 
         {/* デザインのポイント */}
         {work.highlights && work.highlights.length > 0 && (
