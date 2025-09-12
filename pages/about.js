@@ -36,24 +36,191 @@ export default function About() {
           <PostBody>
  
             <p className={styles.p}>
-              1996年生まれ。東京都出身。3年間IT業界に従事していました。
+            1996年生まれ。東京都出身。
               <br />
-              現場では業務系システムのサーバー移行に伴い、データの作成やテストを担当しました。
+              ３年間IT企業で働いたのち、スクールでデザインについて学ぶ。
               <br />
-              社内ではデザイン業務を任された経験があり、Webサイトやアプリのデザインに強く興味を持ちました。
+              現在は業務委託でイラストやバナー、LPデザインを担当しています。
             </p>
 
               <p className={styles.p}>
               <br />
-                当時は独学だったこともあり、しっかりと基礎から学びたいという気持ちで今年の4月からスクールでの学習を開始しました。
+              デザインがユーザーに与える影響を常に考え、チームの想像力を補完しながら
               <br />
-                幅広くデザイン領域に関わっていきたいと思い、現在はUIとUXについて学んでいます。
+              説得力ある提案ができるUI/UXデザイナーを目指しています。
               </p>
 
               <p className={styles.p}>
               </p>
+
+              <section className={styles.sectionBlock}>
+              <div className={styles.sectionBlockInner}>
+              <h2 className={styles.sectionTitle}>今できること</h2>
+                    <h3 className={styles.subsectionTitle}>スキル</h3>
+                    <div className={styles.skillsContainer}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillInfo}>
+                          <span className={styles.skillName}>UI/UXデザイン</span>
+                          <span className={styles.skillPercent}>80%</span>
+                        </div>
+                        <div className={styles.progressBar}>
+                          <div className={styles.progressFill} style={{ width: '80%' }}></div>
+                        </div>
+                      </div>
+                      
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillInfo}>
+                          <span className={styles.skillName}>Webサイトデザイン</span>
+                          <span className={styles.skillPercent}>80%</span>
+                        </div>
+                        <div className={styles.progressBar}>
+                          <div className={styles.progressFill} style={{ width: '80%' }}></div>
+                        </div>
+                      </div>
+                      
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillInfo}>
+                          <span className={styles.skillName}>HTML/CSS</span>
+                          <span className={styles.skillPercent}>75%</span>
+                        </div>
+                        <div className={styles.progressBar}>
+                          <div className={styles.progressFill} style={{ width: '75%' }}></div>
+                        </div>
+                      </div>
+                      
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillInfo}>
+                          <span className={styles.skillName}>JavaScript</span>
+                          <span className={styles.skillPercent}>70%</span>
+                        </div>
+                        <div className={styles.progressBar}>
+                          <div className={styles.progressFill} style={{ width: '70%' }}></div>
+                        </div>
+                      </div>
+                      
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillInfo}>
+                          <span className={styles.skillName}>React</span>
+                          <span className={styles.skillPercent}>60%</span>
+                        </div>
+                        <div className={styles.progressBar}>
+                          <div className={styles.progressFill} style={{ width: '60%' }}></div>
+                        </div>
+                      </div>
+                      
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillInfo}>
+                          <span className={styles.skillName}>Next.js</span>
+                          <span className={styles.skillPercent}>60%</span>
+                        </div>
+                        <div className={styles.progressBar}>
+                          <div className={styles.progressFill} style={{ width: '60%' }}></div>
+                        </div>
+                      </div>
+                      
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillInfo}>
+                          <span className={styles.skillName}>ChatGPT</span>
+                          <span className={styles.skillPercent}>95%</span>
+                        </div>
+                        <div className={styles.progressBar}>
+                          <div className={styles.progressFill} style={{ width: '95%' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                  <h3 className={styles.subsectionTitle}>ツール</h3>
+                  <div className={styles.skillsContainer}>
+                    <div className={styles.skillBar}>
+                      <div className={styles.skillInfo}>
+                        <span className={styles.skillName}>Figma</span>
+                        <span className={styles.skillPercent}>90%</span>
+                      </div>
+                      <div className={styles.progressBar}>
+                        <div className={styles.progressFill} style={{ width: '90%' }}></div>
+                      </div>
+                    </div>
+
+                    <div className={styles.skillBar}>
+                      <div className={styles.skillInfo}>
+                        <span className={styles.skillName}>Miro</span>
+                        <span className={styles.skillPercent}>90%</span>
+                      </div>
+                      <div className={styles.progressBar}>
+                        <div className={styles.progressFill} style={{ width: '90%' }}></div>
+                      </div>
+                    </div>
+
+                    <div className={styles.skillBar}>
+                      <div className={styles.skillInfo}>
+                        <span className={styles.skillName}>Adobe Illustrator</span>
+                        <span className={styles.skillPercent}>80%</span>
+                      </div>
+                      <div className={styles.progressBar}>
+                        <div className={styles.progressFill} style={{ width: '80%' }}></div>
+                      </div>
+                    </div>
+
+                    <div className={styles.skillBar}>
+                      <div className={styles.skillInfo}>
+                        <span className={styles.skillName}>Adobe Photoshop</span>
+                        <span className={styles.skillPercent}>80%</span>
+                      </div>
+                      <div className={styles.progressBar}>
+                        <div className={styles.progressFill} style={{ width: '80%' }}></div>
+                      </div>
+                    </div>
+
+                    <div className={styles.skillBar}>
+                      <div className={styles.skillInfo}>
+                        <span className={styles.skillName}>Adobe Fresco</span>
+                        <span className={styles.skillPercent}>70%</span>
+                      </div>
+                      <div className={styles.progressBar}>
+                        <div className={styles.progressFill} style={{ width: '70%' }}></div>
+                      </div>
+                    </div>
+
+                    <div className={styles.skillBar}>
+                      <div className={styles.skillInfo}>
+                        <span className={styles.skillName}>Adobe Premiere Pro</span>
+                        <span className={styles.skillPercent}>70%</span>
+                      </div>
+                      <div className={styles.progressBar}>
+                        <div className={styles.progressFill} style={{ width: '70%' }}></div>
+                      </div>
+                    </div>
+
+                    <div className={styles.skillBar}>
+                      <div className={styles.skillInfo}>
+                        <span className={styles.skillName}>ChatGPT</span>
+                        <span className={styles.skillPercent}>95%</span>
+                      </div>
+                      <div className={styles.progressBar}>
+                        <div className={styles.progressFill} style={{ width: '95%' }}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section className={styles.sectionBlock}>
+              <h2 className={styles.sectionTitle}>強み</h2>
+              <div className={styles.strengthsContainer}>
+                <div className={styles.strengthItem}>
+                  <h3>ユーザー視点での設計</h3>
+                  <p>IT業界での経験を活かし、ユーザーの使いやすさを最優先に考えた設計ができます。</p>
+                </div>
+                <div className={styles.strengthItem}>
+                  <h3>継続的な学習</h3>
+                  <p>独学からスクールでの学習まで、常に新しい技術やトレンドを学び続けています。</p>
+                </div>
+              </div>
+              </section>
               
-              <h2>FAQ</h2>
+              <h2 className={styles.sectionTitle}>FAQ</h2>
               <Accordion heading="好きな食べ物は？">
                 <p>
                 ラーメン
@@ -68,7 +235,7 @@ export default function About() {
               </Accordion>
               <Accordion heading="３年後はどうなっていたい？">
                 <p>
-                デザインの力で楽しい時代をつくれるデザイナーでいること！
+                3年後には、ユーザーにとっての使いやすさとビジネスの成果を両立させながら、アプリのデザインをリードできるデザイナーになりたいです
                 </p>
               </Accordion>
           </PostBody>

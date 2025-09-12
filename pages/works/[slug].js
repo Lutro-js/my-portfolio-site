@@ -24,6 +24,7 @@ export default function Work({ work, otherWorks }) {
           {/* GRAPHIC カテゴリのときだけ mockupImages[0] を表示 */}
           {work.category === 'GRAPHIC' && work.mockupImages?.[0] && (() => {
             const img = work.mockupImages[0];
+            const img2 = work.mockupImages[1];
             return (
               <div className={styles.imagetop}>
                 <Image
@@ -31,7 +32,15 @@ export default function Work({ work, otherWorks }) {
                   alt={img.alt}
                   className={styles.screenshotImage}
                 />
+                {img2 && (
+                  <Image
+                    src={img2.src}
+                    alt={img2.alt}
+                    className={styles.screenshotImage}
+                  />
+                )}
               </div>
+              
             );
           })()}
 

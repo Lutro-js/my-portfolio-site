@@ -96,6 +96,9 @@
   margin: 0 auto;
   margin-top: 2rem;
   width: min(100%, 400px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .nextImage {

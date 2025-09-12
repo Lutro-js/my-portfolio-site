@@ -4,7 +4,7 @@
         display: none;
     }
     .list{
-        font-family: "花とちょうちょ", sans-serif;
+        font-family: "noto sans japanese", sans-serif;
         display: flex;
         gap: 2em;
     }
