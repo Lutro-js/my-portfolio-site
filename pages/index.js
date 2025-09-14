@@ -12,7 +12,7 @@ import stylesAbout from 'styles/aboutHome.module.css'
 import stylesHero from 'styles/animations.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import kamaboko from 'images/kamaboko.png'
+import profileImage from 'images/plofile_home.png'
 import cube from 'images/cube.jpg'
 import animation from 'styles/animations.module.css'
 
@@ -57,7 +57,7 @@ export default function Home({ posts, works }) {
             </div>
           ))}
         </section>
-        <Pagination nextUrl="/works" nextText="すべてみる" />
+          <Pagination className={styles.button} nextUrl="/works" nextText="すべてみる" />
       </div>
 
       {/* 自己紹介 */}
@@ -68,22 +68,25 @@ export default function Home({ posts, works }) {
         <div className={stylesAbout.wrapper}>
           <div className={stylesAbout.image}>
             <Image
-              src={kamaboko}
+              src={profileImage}
               alt=""
               layout="responsive"
               priority
               placeholder="blur"
+              className={stylesAbout.image}
             />
           </div>
           <div className={stylesAbout.text}>
             <h3>こばやし はなの</h3>
-            <p className={styles.description}>
-              IT業界でシステムの運用保守やテストを担当していました。<br />
-              社内でWebサイト制作を任された経験があり、さらに深く知識やスキルを身につけたいと思い、個人で学習とスクールでUIやUXについて学びながら転職活動をしています。
-            </p>
-            <Pagination nextUrl="/about" nextText="詳しくみる" />
+              <p className={styles.description}>
+                IT業界でシステムの運用保守やテストを担当していました。
+                人に伝わる表現をつくりたい思いからデザインの道に進むことを決め、
+                現在バナーやLPデザインのお仕事をさせていただきながら、UI/UXに携わるため転職を目指しています。
+              </p>
           </div>
         </div>
+        <Pagination nextUrl="/about" nextText="詳しくみる" />
+
       </div>
 
       {/* ブログ */}

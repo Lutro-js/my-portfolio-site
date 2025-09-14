@@ -22,11 +22,12 @@ export default function Hero({
       {imageOn && imageSrc && (
         <figure className={styles.image}>
           <Image
+            className={styles.image}
             src={imageSrc}
             alt=""
             layout="responsive"
-            sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
-            priority
+            
+            // sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
             placeholder="blur"
           />
         </figure>

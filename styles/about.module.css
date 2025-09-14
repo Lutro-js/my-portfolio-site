@@ -1,7 +1,6 @@
 
 /* Base text on About page */
 .p {
-    padding-top: 40px;
     line-height: 2;
     color: #444;
     max-width: 70ch;
@@ -11,6 +10,7 @@
 .span {
     font-size: 12px;
     letter-spacing: 0.15em;
+    padding-left: 10px;
 }
 
 .h1 {
@@ -21,7 +21,6 @@
 
 .name {
     margin-top: 20px;
-    text-align: center;
 }
 
 /* Hero title block */
@@ -81,7 +80,7 @@
 
 .progressFill {
     height: 100%;
-    background: #888;
+    background: #8bc1ca;
     border-radius: 999px;
     transition: width 0.6s ease;
 }
@@ -109,6 +108,7 @@
     padding: 0;
     border: none;
     box-shadow: none;
+    margin-bottom: 2rem;
 }
 
 .strengthItem h3 {

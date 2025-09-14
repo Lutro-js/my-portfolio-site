@@ -195,12 +195,11 @@ export default function Work({ work, otherWorks }) {
         </section>
 
         {work.carouselImages && (
-  <PdfCarousel
-    pages={work.carouselImages}
-    title={work.title}
-    pdfUrl={work.pdfUrl}
-  />
-)}
+          <PdfCarousel
+            pages={work.carouselImages}
+            title={work.titleMaterial}
+          />
+        )}
 
 
 
@@ -237,41 +236,6 @@ export default function Work({ work, otherWorks }) {
               )
             })}
           </div>
-        )}
-
-        {/* Figma埋め込み */}
-        {work.figmaUrl && (
-          <section className={styles.section}>
-            <div className={styles.figmaEmbedWrapper}>
-              <iframe
-                src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(work.figmaUrl)}`}
-                width="100%"
-                height="100%"
-                allowFullScreen
-                loading="lazy"
-                style={{ border: '1px solid #ccc' }}
-              ></iframe>
-            </div>
-          </section>
-        )}
-
-        {/* Miro埋め込み */}
-        {work.miroEmbed && (
-          <MiroEmbed
-            miroUrl={work.miroEmbed.url}
-            title={work.miroEmbed.title}
-            description={work.miroEmbed.description}
-          />
-        )}
-
-        {/* Figmaプロトタイプ比較 */}
-        {work.figmaPrototypeComparison && (
-          <FigmaPrototypeComparison
-            beforeUrl={work.figmaPrototypeComparison.beforeUrl}
-            afterUrl={work.figmaPrototypeComparison.afterUrl}
-            title={work.figmaPrototypeComparison.title}
-            description={work.figmaPrototypeComparison.description}
-          />
         )}
 
         {/* モックアップ（GRAPHIC以外のときのみ表示） */}

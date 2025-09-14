@@ -8,14 +8,15 @@ import Accordion from '@/components/accordion'
 import Image from 'next/image'
 import eyecatch from 'images/about.jpg'
 import BlueFrame from 'components/blue-frame'
-import abouthero from 'images/abouthero.jpg'
+import aboutHero from 'images/profile_about.png'
 import styles from 'styles/about.module.css'
+import stylesLine from 'styles/homeWorks.module.css'
 
 export default function About() {
   return (
     <Container>
       <Meta 
-        pageTitle="アバウト"
+        pageTitle="わたしについて"
         pageDesc="About development activities" 
         pageImg={eyecatch.src}
         pageImgW={eyecatch.width}
@@ -23,7 +24,7 @@ export default function About() {
       />
       <Hero className={styles.herotitle}
         title=""
-        subtitle="" imageOn imageSrc={abouthero}
+        subtitle="" imageOn imageSrc={aboutHero}
         >
         <div className={styles.name}>
           <span className={styles.span}>Kobayashi Hanano</span>
@@ -55,7 +56,9 @@ export default function About() {
 
               <section className={styles.sectionBlock}>
               <div className={styles.sectionBlockInner}>
-              <h2 className={styles.sectionTitle}>今できること</h2>
+              <div className={stylesLine.homeWorksTitle}>
+                  <div className={stylesLine.border}></div><h2>今できること</h2>
+                </div>
                     <h3 className={styles.subsectionTitle}>スキル</h3>
                     <div className={styles.skillsContainer}>
                       <div className={styles.skillBar}>
@@ -207,20 +210,28 @@ export default function About() {
               </section>
 
               <section className={styles.sectionBlock}>
-              <h2 className={styles.sectionTitle}>強み</h2>
-              <div className={styles.strengthsContainer}>
-                <div className={styles.strengthItem}>
-                  <h3>ユーザー視点での設計</h3>
-                  <p>IT業界での経験を活かし、ユーザーの使いやすさを最優先に考えた設計ができます。</p>
+                <div className={stylesLine.homeWorksTitle}>
+                  <div className={stylesLine.border}></div><h2>強み</h2>
                 </div>
-                <div className={styles.strengthItem}>
-                  <h3>継続的な学習</h3>
-                  <p>独学からスクールでの学習まで、常に新しい技術やトレンドを学び続けています。</p>
+                <div className={styles.strengthsContainer}>
+                  <div className={styles.strengthItem}>
+                    <h3>継続的な学習</h3>
+                    <p>成長意欲が高く、求められるスキルや新しい知識を常に学び続けています。</p>
+                  </div>
+                  <div className={styles.strengthItem}>
+                    <h3>熱意・粘り強さ</h3>
+                    <p>自分で決めた目標は必ず達成するという強い意志があり、何事も小さなことからコツコツ積み重ねることを得意としています。</p>
+                  </div>
+                  <div className={styles.strengthItem}>
+                    <h3>素直さ・柔軟性</h3>
+                    <p>周囲からもよく「素直」と言われます。人の話には先入観なく興味を持って耳を傾け、アドバイスや指示も柔軟に受け入れることができます。</p>
+                  </div>
                 </div>
-              </div>
               </section>
               
-              <h2 className={styles.sectionTitle}>FAQ</h2>
+              <div className={stylesLine.homeWorksTitle}>
+                  <div className={stylesLine.border}></div><h2>FAQ</h2>
+                </div>
               <Accordion heading="好きな食べ物は？">
                 <p>
                 ラーメン
@@ -230,7 +241,8 @@ export default function About() {
               </Accordion>
               <Accordion heading="趣味はありますか？">
                 <p>
-                オンラインゲームをすること！
+                ゲーム
+                猫の観察
                 </p>
               </Accordion>
               <Accordion heading="３年後はどうなっていたい？">

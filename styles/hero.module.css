@@ -42,12 +42,13 @@
   
   /* image */
   .image {
-    width: 100%;
+    width: 40%;
+    border-radius: 10px;
   }
   
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     .image {
       width: 50%;
     }
   }
-  
+   */

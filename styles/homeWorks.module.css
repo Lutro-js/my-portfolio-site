@@ -19,6 +19,7 @@
     align-items: center;
   }
   
+  
   /* テキスト・画像交互レイアウト（PC用） */
   @media (min-width: 768px) {
     .even .workImageText {
