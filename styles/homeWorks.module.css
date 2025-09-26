@@ -71,6 +71,25 @@
     object-fit: cover;
     object-position: center;
   }
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .workImageText {
+    width: 100%;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .workImage,
+  .workText {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .description {
+    width: 100%;
+  }
+}
   
   /* タイトル＋線 */
   .homeWorksTitle {

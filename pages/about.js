@@ -120,16 +120,6 @@ export default function About() {
                           <div className={styles.progressFill} style={{ width: '60%' }}></div>
                         </div>
                       </div>
-                      
-                      <div className={styles.skillBar}>
-                        <div className={styles.skillInfo}>
-                          <span className={styles.skillName}>ChatGPT</span>
-                          <span className={styles.skillPercent}>95%</span>
-                        </div>
-                        <div className={styles.progressBar}>
-                          <div className={styles.progressFill} style={{ width: '95%' }}></div>
-                        </div>
-                      </div>
                     </div>
                   </div>
 
