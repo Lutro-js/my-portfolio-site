@@ -40,7 +40,7 @@
   /* テキスト部分 */
   .workText {
     max-width: 500px;
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 12px;

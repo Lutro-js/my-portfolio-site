@@ -34,16 +34,15 @@
   }
   
   .text h3 {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
+    text-align: center;
   }
 
 /* Responsive */
 @media (max-width: 767px) {
   .wrapper {
     flex-direction: column;
-    align-items: stretch;
     gap: 1.5rem;
-    padding: 0 16px;
   }
 
   .image {

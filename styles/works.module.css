@@ -70,6 +70,7 @@
   aspect-ratio: 4 / 3;
   overflow: visible;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }

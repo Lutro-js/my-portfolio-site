@@ -66,6 +66,18 @@
       flex-direction: column; /* ✅ モバイルでは縦並びに */
     }
 
+    .categoryList {
+      min-width: auto;
+      width: 100%;
+    }
+
+    .categoryList ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
     .aboutHomeLayout {
       flex-direction: column; 
       gap: 20px;

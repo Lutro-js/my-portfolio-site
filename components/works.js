@@ -21,10 +21,11 @@ export default function Works({ works }) {
                     sizes="(max-width: 600px) 100vw, 400px"
                   />
                 </div>
-              </figure>
               <h2 className={`${styles.workTitle} ${animation.underlineAnimate}`}>
                 {title}
               </h2>
+              </figure>
+
             </div>
           </Link>
         </article>
