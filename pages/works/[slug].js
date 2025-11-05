@@ -21,8 +21,65 @@ export default function Work({ work, otherWorks }) {
           <h1>{work.title}</h1>
           <p>{work.description}</p>
 
-          {/* GRAPHIC カテゴリのときだけ mockupImages[0] を表示 */}
-          {work.category === 'GRAPHIC' && work.mockupImages?.[0] && (() => {
+          {/* news-banner 用：説明文の直下に月別3カラム配置（各月2枚ずつ縦並び） */}
+          {work.slug === 'news-banner' && Array.isArray(work.mockupImages) && work.mockupImages.length >= 6 && (
+            <div className={styles.monthlyBannerGrid}>
+              {/* 9月：左列 */}
+              <div className={styles.monthlyColumnStack}>
+                <div className={styles.monthlyImageWrapper}>
+                  <Image
+                    src={work.mockupImages[0].src}
+                    alt={work.mockupImages[0].alt}
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
+                <div className={styles.monthlyImageWrapper}>
+                  <Image
+                    src={work.mockupImages[1].src}
+                    alt={work.mockupImages[1].alt}
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
+              </div>
+              {/* 10月：中央列 */}
+              <div className={styles.monthlyColumnStack}>
+                <div className={styles.monthlyImageWrapper}>
+                  <Image
+                    src={work.mockupImages[2].src}
+                    alt={work.mockupImages[2].alt}
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
+                <div className={styles.monthlyImageWrapper}>
+                  <Image
+                    src={work.mockupImages[3].src}
+                    alt={work.mockupImages[3].alt}
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
+              </div>
+              {/* 11月：右列 */}
+              <div className={styles.monthlyColumnStack}>
+                <div className={styles.monthlyImageWrapper}>
+                  <Image
+                    src={work.mockupImages[4].src}
+                    alt={work.mockupImages[4].alt}
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
+                <div className={styles.monthlyImageWrapper}>
+                  <Image
+                    src={work.mockupImages[5].src}
+                    alt={work.mockupImages[5].alt}
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* GRAPHIC カテゴリで画像が2枚以下のときだけ先頭表示（news-banner は除外） */}
+          {work.slug !== 'news-banner' && work.category === 'GRAPHIC' && Array.isArray(work.mockupImages) && work.mockupImages.length > 0 && work.mockupImages.length <= 2 && (() => {
             const img = work.mockupImages[0];
             const img2 = work.mockupImages[1];
             return (
@@ -248,6 +305,21 @@ export default function Work({ work, otherWorks }) {
               </a>
             )}
 
+            {work.mockupImages.map((img, i) => (
+              <div key={i} className={styles.mockupImageWrapper}>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  style={{ width: '100%', height: 'auto', maxWidth: '360px' }}
+                />
+              </div>
+            ))}
+          </section>
+        )}
+
+        {/* GRAPHIC のときは全画像を3カラムで表示（画像が3枚以上の場合のみ、news-banner は除外） */}
+        {work.category === 'GRAPHIC' && work.slug !== 'news-banner' && Array.isArray(work.mockupImages) && work.mockupImages.length >= 3 && (
+          <section className={styles.mockupThreeColumn}>
             {work.mockupImages.map((img, i) => (
               <div key={i} className={styles.mockupImageWrapper}>
                 <Image

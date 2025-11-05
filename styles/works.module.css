@@ -292,6 +292,45 @@
 
 }
 
+.mockupThreeColumn {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+  align-items: start;
+}
+
+.monthlyBannerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+  align-items: start;
+}
+
+.monthlyColumnStack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.monthlySingle {
+  display: flex;
+  justify-content: center;
+}
+
+.monthlyImageWrapper {
+  width: 100%;
+  max-width: 420px; /* 大きめに表示 */
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .monthlyBannerGrid {
+    grid-template-columns: 1fr; /* 縦一列に */
+  }
+}
+
 .column {
   display: flex;
   flex-direction: column;
