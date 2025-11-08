@@ -10,7 +10,7 @@ export default function Works({ works }) {
         <article className={`${styles.work} ${animation.hoverGroup}`} key={slug}>
           <Link href={`/works/${slug}`}>
             <div className={styles.card}>
-              <figure className={`${styles.imageWrapper} ${animation.hoverZoom}`}>
+              <figure className={animation.hoverZoom}>
                 <div className={styles.imageWrapper}>
                   <Image
                     src={eyecatch}
@@ -21,11 +21,10 @@ export default function Works({ works }) {
                     sizes="(max-width: 600px) 100vw, 400px"
                   />
                 </div>
-              <h2 className={`${styles.workTitle} ${animation.underlineAnimate}`}>
-                {title}
-              </h2>
+                <h2 className={`${styles.workTitle} ${animation.underlineAnimate}`}>
+                  {title}
+                </h2>
               </figure>
-
             </div>
           </Link>
         </article>
