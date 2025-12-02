@@ -77,10 +77,12 @@ export default function Home({ posts, works, bannerWorks }) {
               <Image
                 src={profileImage}
                 alt=""
-                layout="responsive"
+                width={500}
+                height={500}
                 priority
                 placeholder="blur"
                 className={stylesAbout.image}
+                style={{ width: '100%', height: 'auto' }}
               />
             </div>
             <div className={stylesAbout.text}>

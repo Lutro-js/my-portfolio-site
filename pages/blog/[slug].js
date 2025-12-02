@@ -31,12 +31,12 @@ export default function Post({ title, publish, content, eyecatch, categories, de
                     <Image
                         src={eyecatch.url}
                         alt=""
-                        layout="responsive"
                         width={eyecatch.width}
                         height={eyecatch.height}
                         sizes="(min-width: 1152px) 1152px, 100vw"
                         priority
                         placeholder={eyecatch.blurDataURL ? 'blur' : 'empty'}
+                        style={{ width: '100%', height: 'auto' }}
                         blurDataURL={eyecatch.blurDataURL || ""}
                     />
                 </figure>

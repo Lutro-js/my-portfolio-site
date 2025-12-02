@@ -158,7 +158,7 @@ export default function Work({ work, otherWorks }) {
                   src={work.images.persona.src}
                   alt={work.images.persona.alt}
                   fill
-                  style={{ objectFit: 'contain' }} // 画像全体を表示
+                  style={{ objectFit: 'contain' }}
                   className={styles.screenshotImage}
                 />
               </div>
@@ -170,7 +170,7 @@ export default function Work({ work, otherWorks }) {
                   src={work.images.backgorund.src}
                   alt={work.images.backgorund.alt}
                   fill
-                  style={{ objectFit: 'contain' }} 
+                  style={{ objectFit: 'contain' }}
                   className={styles.screenshotImage}
                 />
               </div>

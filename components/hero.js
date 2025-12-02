@@ -25,10 +25,11 @@ export default function Hero({
             className={styles.image}
             src={imageSrc}
             alt=""
-            layout="responsive"
-            
-            // sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
+            width={800}
+            height={600}
             placeholder="blur"
+            style={{ width: '100%', height: 'auto' }}
+            sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
           />
         </figure>
       )}

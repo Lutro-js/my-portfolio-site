@@ -12,9 +12,9 @@ export default function Posts({posts}) {
                             <Image
                                 src={eyecatch?.url || null}
                                 alt=''
-                                layout="fill"
-                                objectFit='cover'
-                                size="(min-width): 1152px 576px, 50vw"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                sizes="(min-width: 1152px) 576px, 50vw"
                             />
                         </figure>
                         <h2>{title}</h2>
